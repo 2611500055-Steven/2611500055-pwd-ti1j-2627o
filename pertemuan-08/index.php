@@ -175,16 +175,16 @@ switch ($programStudi) {
 		</section>
 
 		<section id="peminjaman">
-        <h2>Permohonan Peminjaman Fasilitas Kampus</h2>
+            <h2>Permohonan Peminjaman Fasilitas Kampus</h2>
 
-        <form method="POST" action="#peminjaman" id="formPeminjaman">
-        <input type="hidden" name="form_peminjaman" value="1">
+            <form method="POST" action="#peminjaman" id="formPeminjaman">
+            <input type="hidden" name="form_peminjaman" value="1">
 
-        <label>Nama Penanggung Jawab</label>
-        <input type="text" name="nama_pj" required>
+            <label>Nama Penanggung Jawab</label>
+            <input type="text" name="nama_pj" required>
 
-        <label>Jenis Fasilitas</label>
-        <select name="fasilitas" required>
+            <label>Jenis Fasilitas</label>
+            <select name="fasilitas" required>
             <option value="">-- Pilih Fasilitas --</option>
             <option value="Ruang Kelas">Ruang Kelas</option>
             <option value="Aula">Aula</option>
@@ -194,19 +194,19 @@ switch ($programStudi) {
             <option value="Proyektor">Proyektor</option>
         </select>
 
-        <label>Tanggal Peminjaman</label>
-        <input type="date" name="tanggal" required>
+            <label>Tanggal Peminjaman</label>
+            <input type="date" name="tanggal" required>
 
-        <label>Durasi Peminjaman (jam)</label>
-        <input type="number" name="durasi"
+            <label>Durasi Peminjaman (jam)</label>
+            <input type="number" name="durasi"
                min="1" max="24" required>
 
-        <label>Keperluan Peminjaman</label>
-        <textarea name="keperluan" required></textarea>
+            <label>Keperluan Peminjaman</label>
+            <textarea name="keperluan" required></textarea>
 
-        <button type="submit">Kirim</button>
-        <button type="reset">Batal</button>
-    </form>
+            <button type="submit">Kirim</button>
+            <button type="reset">Batal</button>
+        </form>
         </section>
 
 		<section id="contact">

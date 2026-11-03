@@ -286,7 +286,7 @@ switch ($programStudi) {
     <input type="hidden" name="form_peminjaman" value="1">
 
     <div class="field-peminjaman">
-        <label for="nama_pj">Nama Penanggung Jawab</label>
+        <label for="nama_pj">Nama Penanggung Jawab</label><br />
         <input type="text" name="nama_pj" id="nama_pj" maxlength="100" required>
     </div>
 
@@ -302,17 +302,17 @@ switch ($programStudi) {
     </div>
 
     <div class="field-peminjaman">
-        <label for="tanggal">Tanggal Peminjaman</label>
+        <label for="tanggal">Tanggal Peminjaman</label><br />
         <input type="date" name="tanggal" id="tanggal" required>
     </div>
 
     <div class="field-peminjaman">
-        <label for="durasi">Durasi Peminjaman (jam)</label>
+        <label for="durasi">Durasi Peminjaman (jam)</label><br />
         <input type="number" name="durasi" id="durasi" min="1" max="24" required>
     </div>
 
     <div class="field-peminjaman">
-        <label for="keperluan">Keperluan Peminjaman</label>
+        <label for="keperluan">Keperluan Peminjaman</label><br />
         <textarea name="keperluan" id="keperluan" maxlength="1000" required></textarea>
     </div>
 

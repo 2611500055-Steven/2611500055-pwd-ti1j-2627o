@@ -286,13 +286,13 @@ switch ($programStudi) {
     <input type="hidden" name="form_peminjaman" value="1">
 
     <div class="field-peminjaman">
-        <label>Nama Penanggung Jawab</label>
-        <input type="text" name="nama_pj" maxlength="100" required>
+        <label for="nama_pj">Nama Penanggung Jawab</label>
+        <input type="text" name="nama_pj" id="nama_pj" maxlength="100" required>
     </div>
 
     <div class="field-peminjaman">
-        <label>Jenis Fasilitas</label>
-        <select name="fasilitas" required>
+        <label for="fasilitas">Jenis Fasilitas</label>
+        <select name="fasilitas" id="fasilitas" required>
             <option value="">-- Pilih Fasilitas --</option>
             <option value="Ruang Kelas">Ruang Kelas</option>
             <option value="Aula">Aula</option>
@@ -302,18 +302,18 @@ switch ($programStudi) {
     </div>
 
     <div class="field-peminjaman">
-        <label>Tanggal Peminjaman</label>
-        <input type="date" name="tanggal" required>
+        <label for="tanggal">Tanggal Peminjaman</label>
+        <input type="date" name="tanggal" id="tanggal" required>
     </div>
 
     <div class="field-peminjaman">
-        <label>Durasi Peminjaman (jam)</label>
-        <input type="number" name="durasi" min="1" max="24" required>
+        <label for="durasi">Durasi Peminjaman (jam)</label>
+        <input type="number" name="durasi" id="durasi" min="1" max="24" required>
     </div>
 
     <div class="field-peminjaman">
-        <label>Keperluan Peminjaman</label>
-        <textarea name="keperluan" maxlength="1000" required></textarea>
+        <label for="keperluan">Keperluan Peminjaman</label>
+        <textarea name="keperluan" id="keperluan" maxlength="1000" required></textarea>
     </div>
 
     <button type="submit">Kirim</button>
@@ -323,11 +323,11 @@ switch ($programStudi) {
     <?php if (isset($_SESSION["nama"])): ?>
 				<article id="HasilPeminjamanFasilitasKampus" class="submission-result" aria-live="polite">
 					<h3>Data Formulir yang Dikirim</h3>
-					<p><strong>Nama Penanggung Jawab:</strong> <?= htmlspecialchars($_SESSION["nama"] ?? "", ENT_QUOTES, "UTF-8") ?></p>
+					<p><strong>Nama Penanggung Jawab:</strong> <?= htmlspecialchars($_SESSION["nama_pj"] ?? "", ENT_QUOTES, "UTF-8") ?></p>
 					<p><strong>Jenis Fasilitas:</strong> <?= htmlspecialchars($_SESSION["fasilitas"] ?? "", ENT_QUOTES, "UTF-8") ?></p>
-					<p><strong>Tanggal Peminjaman:</strong> <?= htmlspecialchars($_SESSION["Tanggal Peminjaman"] ?? "", ENT_QUOTES, "UTF-8") ?></p>
-					<p><strong>Durasi Peminjaman:</strong> <?= htmlspecialchars($_SESSION["Durasi Peminjaman"] ?? "", ENT_QUOTES, "UTF-8") ?> jam</p>
-					<p><strong>Keperluan Peminjaman:</strong> <?= nl2br(htmlspecialchars($_SESSION["Keperluan Peminjaman"] ?? "", ENT_QUOTES, "UTF-8")) ?></p>
+					<p><strong>Tanggal Peminjaman:</strong> <?= htmlspecialchars($_SESSION["tanggal"] ?? "", ENT_QUOTES, "UTF-8") ?></p>
+					<p><strong>Durasi Peminjaman:</strong> <?= htmlspecialchars($_SESSION["durasi"] ?? "", ENT_QUOTES, "UTF-8") ?> jam</p>
+					<p><strong>Keperluan Peminjaman:</strong> <?= nl2br(htmlspecialchars($_SESSION["keperluan"] ?? "", ENT_QUOTES, "UTF-8")) ?></p>
 				</article>
 			<?php endif; ?>
     </section>

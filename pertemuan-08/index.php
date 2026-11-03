@@ -35,11 +35,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 // Mengamankan data sebelum ditampilkan kembali ke halaman HTML.
 // P6: PHP dasar dan pemrograman sisi peladen
 // Bagian 1: Variabel dan konstanta
-$nim = "0344300002";
-$namaMahasiswa = "Cantika Putih";
-$programStudi = "SI";
+$nim = "2611500055";
+$namaMahasiswa = "Seteven";
+$programStudi = "TI";
 $tahunAkademik = "2026/2027";
-$semester = 4;
+$semester = 1;
 $ipk = 3.75;
 $statusAktif = true;
 $catatanTambahan = null;
@@ -62,12 +62,12 @@ if ($semester < 3) {
 	$keteranganSemester = "Semester akhir";
 }
 
-$namaProdi = ($programStudi == "SI") ? "Sistem Informasi" : (($programStudi == "TI") ? "Teknik Informatika" : "Lainnya");
+$namaProdi = ($programStudi == "TI") ? "Teknik Informatika" : (($programStudi == "TI") ? "Teknik Informatika" : "Lainnya");
 
 // Bagian 4: Percabangan switch-case-default
 switch ($programStudi) {
-	case "SI":
-		$fokusProgramStudi = "Sistem informasi dan proses bisnis";
+	case "TI":
+		$fokusProgramStudi = "Sistem Informasi dan proses bisnis";
 		break;
 	case "TI":
 		$fokusProgramStudi = "Komputasi dan pengembangan perangkat lunak";
@@ -278,6 +278,41 @@ switch ($programStudi) {
 				</article>
 			<?php endif; ?>
 		</section>
+
+		<section id="peminjaman">
+    <h2>Permohonan Peminjaman Fasilitas Kampus</h2>
+
+    <form method="POST" action="#peminjaman" id="formPeminjaman">
+        <input type="hidden" name="form_peminjaman" value="1">
+
+        <label>Nama Penanggung Jawab</label>
+        <input type="text" name="nama_pj" required>
+
+        <label>Jenis Fasilitas</label>
+        <select name="fasilitas" required>
+            <option value="">-- Pilih Fasilitas --</option>
+            <option value="Ruang Kelas">Ruang Kelas</option>
+            <option value="Aula">Aula</option>
+            <option value="Laboratorium Komputer">
+                Laboratorium Komputer
+            </option>
+            <option value="Proyektor">Proyektor</option>
+        </select>
+
+        <label>Tanggal Peminjaman</label>
+        <input type="date" name="tanggal" required>
+
+        <label>Durasi Peminjaman (jam)</label>
+        <input type="number" name="durasi"
+               min="1" max="24" required>
+
+        <label>Keperluan Peminjaman</label>
+        <textarea name="keperluan" required></textarea>
+
+        <button type="submit">Kirim</button>
+        <button type="reset">Batal</button>
+    </form>
+        </section>
 	</main>
 
 	<footer>

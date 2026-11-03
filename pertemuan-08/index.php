@@ -324,10 +324,10 @@ switch ($programStudi) {
 				<article id="HasilPeminjamanFasilitasKampus" class="submission-result" aria-live="polite">
 					<h3>Data Formulir yang Dikirim</h3>
 					<p><strong>Nama Penanggung Jawab:</strong> <?= htmlspecialchars($_SESSION["nama"] ?? "", ENT_QUOTES, "UTF-8") ?></p>
-					<p><strong>Jenis Fasilitas:</strong> <?= htmlspecialchars($_SESSION["email"] ?? "", ENT_QUOTES, "UTF-8") ?></p>
-					<p><strong>Tanggal Peminjaman:</strong> <?= htmlspecialchars($_SESSION["tanggal"] ?? "", ENT_QUOTES, "UTF-8") ?></p>
-					<p><strong>Durasi Peminjaman:</strong> <?= htmlspecialchars($_SESSION["durasi"] ?? "", ENT_QUOTES, "UTF-8") ?> jam</p>
-					<p><strong>Keperluan Peminjaman:</strong> <?= nl2br(htmlspecialchars($_SESSION["keperluan"] ?? "", ENT_QUOTES, "UTF-8")) ?></p>
+					<p><strong>Jenis Fasilitas:</strong> <?= htmlspecialchars($_SESSION["fasilitas"] ?? "", ENT_QUOTES, "UTF-8") ?></p>
+					<p><strong>Tanggal Peminjaman:</strong> <?= htmlspecialchars($_SESSION["Tanggal Peminjaman"] ?? "", ENT_QUOTES, "UTF-8") ?></p>
+					<p><strong>Durasi Peminjaman:</strong> <?= htmlspecialchars($_SESSION["Durasi Peminjaman"] ?? "", ENT_QUOTES, "UTF-8") ?> jam</p>
+					<p><strong>Keperluan Peminjaman:</strong> <?= nl2br(htmlspecialchars($_SESSION["Keperluan Peminjaman"] ?? "", ENT_QUOTES, "UTF-8")) ?></p>
 				</article>
 			<?php endif; ?>
     </section>

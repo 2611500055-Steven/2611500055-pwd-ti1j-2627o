@@ -174,6 +174,8 @@ switch ($programStudi) {
 			</article>
 		</section>
 
+		<section id="peminjaman">
+			<h2>Peminjaman Fasilitas</h2>
 		<form method="POST" action="#peminjaman" id="formPeminjaman">
     <input type="hidden" name="form_peminjaman" value="1">
 
